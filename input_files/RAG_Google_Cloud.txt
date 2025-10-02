@@ -1,0 +1,211 @@
+02/10/2025, 16:10
+
+Topics
+
+What is Retrieval-Augmented Generation (RAG)? | Google Cloud
+
+RAG
+
+What is Retrieval-Augmented Generation
+(RAG)?
+RAG (Retrieval-Augmented Generation) is an AI framework that combines the
+strengths of traditional information retrieval systems (such as search and
+databases) with the capabilities of generative large language models (LLMs).
+By combining your data and world knowledge with LLM language skills,
+grounded generation is more accurate, up-to-date, and relevant to your
+specific needs. Check out this ebook to unlock your “Enterprise Truth.”
+Get started for free
+
+35:30
+Grounding for Gemini with Vertex AI Search and DIY RAG
+
+How does Retrieval-Augmented Generation work?
+RAGs operate with a few main steps to help enhance generative AI outputs:
+
+https://cloud.google.com/use-cases/retrieval-augmented-generation
+
+1/7
+
+02/10/2025, 16:10
+
+What is Retrieval-Augmented Generation (RAG)? | Google Cloud
+
+Retrieval and pre-processing: RAGs leverage powerful search
+algorithms to query external data, such as web pages, knowledge bases,
+and databases. Once retrieved, the relevant information undergoes preprocessing, including tokenization, stemming, and removal of stop words.
+Grounded generation: The pre-processed retrieved information is then
+seamlessly incorporated into the pre-trained LLM. This integration
+enhances the LLM's context, providing it with a more comprehensive
+understanding of the topic. This augmented context enables the LLM to
+generate more precise, informative, and engaging responses.
+
+Why use RAG?
+RAG offers several advantages augmenting traditional methods of text
+generation, especially when dealing with factual information or data-driven
+responses. Here are some key reasons why using RAG can be beneficial:
+
+Access to fresh information
+LLMs are limited to their pre-trained data. This leads to outdated and
+potentially inaccurate responses. RAG overcomes this by providing up-to-date
+information to LLMs.
+
+Factual grounding
+LLMs are powerful tools for generating creative and engaging text, but they
+can sometimes struggle with factual accuracy. This is because LLMs are
+trained on massive amounts of text data, which may contain inaccuracies or
+biases.
+Providing “facts” to the LLM as part of the input prompt can mitigate “gen AI
+hallucinations.” The crux of this approach is ensuring that the most relevant
+facts are provided to the LLM, and that the LLM output is entirely grounded on
+those facts while also answering the user’s question and adhering to system
+instructions and safety constraints.
+
+https://cloud.google.com/use-cases/retrieval-augmented-generation
+
+2/7
+
+02/10/2025, 16:10
+
+What is Retrieval-Augmented Generation (RAG)? | Google Cloud
+
+Using Gemini’s long context window (LCW) is a great way to provide source
+materials to the LLM. If you need to provide more information than fits into the
+LCW, or if you need to scale up performance, you can use a RAG approach
+that will reduce the number of tokens, saving you time and cost.
+
+Search with vector databases and relevancy re-rankers
+RAGs usually retrieve facts via search, and modern search engines now
+leverage vector databases to efficiently retrieve relevant documents. Vector
+databases store documents as embeddings in a high-dimensional space,
+allowing for fast and accurate retrieval based on semantic similarity. Multimodal embeddings can be used for images, audio and video, and more and
+these media embeddings can be retrieved alongside text embeddings or
+multi-language embeddings.
+Advanced search engines like Vertex AI Search use semantic search and
+keyword search together (called hybrid search), and a re-ranker which scores
+search results to ensure the top returned results are the most
+relevant. Additionally searches perform better with a clear, focused query
+without misspellings; so prior to lookup, sophisticated search engines will
+transform a query and fix spelling mistakes.
+
+Relevance, accuracy, and quality
+The retrieval mechanism in RAG is critically important. You need the best
+semantic search on top of a curated knowledge base to ensure that the
+retrieved information is relevant to the input query or context. If your retrieved
+information is irrelevant, your generation could be grounded but off-topic or
+incorrect.
+By fine-tuning or prompt-engineering the LLM to generate text entirely based
+on the retrieved knowledge, RAG helps to minimize contradictions and
+inconsistencies in the generated text. This significantly improves the quality of
+the generated text, and improves the user experience.
+The Vertex Eval Service now scores LLM generated text and retrieved chunks
+on metrics like “coherence,” “fluency,” “groundedness,” "safety,"
+“instruction_following,” “question_answering_quality,” and more. These
+https://cloud.google.com/use-cases/retrieval-augmented-generation
+
+3/7
+
+02/10/2025, 16:10
+
+What is Retrieval-Augmented Generation (RAG)? | Google Cloud
+
+metrics help you measure the grounded text you get from the LLM (for some
+metrics that is a comparison to a ground truth answer you have
+provided). Implementing these evaluations gives you a baseline measurement
+and you can optimize for RAG quality by configuring your search engine,
+curating your source data, improving source layout parsing or chunking
+strategies, or refining the user’s question prior to search. A RAG Ops, metrics
+driven approach like this will help you hill climb to high quality RAG and
+grounded generation.
+
+RAGs, agents, and chatbots
+RAG and grounding can be integrated into any LLM application or agent which
+needs access to fresh, private, or specialized data. By accessing external
+information, RAG-powered chatbots and conversational agents leverage
+external knowledge to provide more comprehensive, informative, and contextaware responses, improving the overall user experience.
+Your data and your use case are what differentiate what you are building with
+gen AI. RAG and grounding bring your data to LLMs efficiently and scalably.
+
+What Google Cloud products and services are related to
+RAG?
+The following Google Cloud products are related to Retrieval-Augmented Generation:
+
+Vertex AI RAG Engine
+Data framework for developing context-augmented LLM applications, and
+facilitates retrieval-augmented generation (RAG.)
+
+https://cloud.google.com/use-cases/retrieval-augmented-generation
+
+4/7
+
+02/10/2025, 16:10
+
+What is Retrieval-Augmented Generation (RAG)? | Google Cloud
+
+Vertex AI Search
+Vertex AI Search is Google Search for your data, a fully managed, out-of-thebox search and RAG builder.
+
+Vertex AI Vector Search
+The ultra performant vector index that powers Vertex AI Search; it enables
+semantic and hybrid search and retrieval from huge collections of embeddings
+with high recall at high query rate.
+
+BigQuery
+Large datasets that you can use to train machine learning models, including
+models for Vertex AI Vector Search.
+
+Grounded Generation API
+https://cloud.google.com/use-cases/retrieval-augmented-generation
+
+5/7
+
+02/10/2025, 16:10
+
+What is Retrieval-Augmented Generation (RAG)? | Google Cloud
+
+Gemini high-fidelity mode grounded with Google Search or inline facts or bring
+your own search engine.
+
+AlloyDB AI
+Run models in Vertex AI and access them in your application using familiar SQL
+queries. Use Google models, such as Gemini, or your own custom models.
+
+Further reading
+Learn more about using retrieval augmented generation with these resources.
+Using Vertex AI to build next-gen search applications
+RAGs powered by Google Search technology
+RAG with databases on Google Cloud
+APIs to build your own search and Retrieval Augmented Generation (RAG)
+systems
+How to use RAG in BigQuery to bolster LLMs
+Code sample and quickstart to get familiar with RAG
+Infrastructure for a RAG-capable generative AI application using Vertex AI
+and Vector Search
+Infrastructure for a RAG-capable generative AI application using Vertex AI
+and AlloyDB for PostgreSQL
+Infrastructure for a RAG-capable generative AI application using GKE
+
+Take the next step
+Start building on Google Cloud with $300 in free credits and 20+ always free
+products.
+https://cloud.google.com/use-cases/retrieval-augmented-generation
+
+6/7
+
+02/10/2025, 16:10
+
+What is Retrieval-Augmented Generation (RAG)? | Google Cloud
+
+Get started for free
+
+Need help getting started?
+Contact sales
+Work with a trusted partner
+Find a partner
+Continue browsing
+See all products
+
+https://cloud.google.com/use-cases/retrieval-augmented-generation
+
+7/7
+
+

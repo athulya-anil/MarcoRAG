@@ -1,0 +1,181 @@
+02/10/2025, 16:09
+
+Vertex AI RAG Engine overview | Generative AI on Vertex AI | Google Cloud
+
+Vertex AI RAG Engine overview
+The VPC-SC security controls (/vertex-ai/generative-ai/docs/security-controls) and CMEK are supported
+by Vertex AI RAG Engine. Data residency and AXT security controls aren't supported.
+
+The Vertex AI RAG Engine-managed Spanner instance is used as a vector database and is GA with billing
+enabled. For more information, see Vertex AI RAG Engine billing
+(/vertex-ai/generative-ai/docs/rag-engine/rag-engine-billing).
+
+You must be added to the allowlist to access Vertex AI RAG Engine in us-central1. For users with
+existing projects, there is no impact. For users with new projects, you can try other regions, or contact
+
+vertex-ai-rag-engine-support@google.com to onboard to us-central1.
+This page describes what Vertex AI RAG Engine is and how it works.
+
+Description
+
+Console
+
+To learn how to use the Vertex AI SDK to run Vertex
+
+Try Vertex AI RAG Engine (https://console.cloud.goo
+
+AI RAG Engine tasks, see the RAG quickstart for
+Python
+(/vertex-ai/generative-ai/docs/rag-quickstart).
+
+Overview
+Vertex AI RAG Engine, a component of the Vertex AI Platform, facilitates RetrievalAugmented Generation (RAG). Vertex AI RAG Engine is also a data framework for
+developing context-augmented large language model (LLM) applications. Context
+augmentation occurs when you apply an LLM to your data. This implements retrievalaugmented generation (RAG).
+A common problem with LLMs is that they don't understand private knowledge, that is, your
+organization's data. With Vertex AI RAG Engine, you can enrich the LLM context with
+additional private information, because the model can reduce hallucination and answer
+questions more accurately.
+
+https://cloud.google.com/vertex-ai/generative-ai/docs/rag-engine/rag-overview
+
+1/4
+
+02/10/2025, 16:09
+
+Vertex AI RAG Engine overview | Generative AI on Vertex AI | Google Cloud
+
+By combining additional knowledge sources with the existing knowledge that LLMs have, a
+better context is provided. The improved context along with the query enhances the quality
+of the LLM's response.
+The following image illustrates the key concepts to understanding Vertex AI RAG Engine.
+
+These concepts are listed in the order of the retrieval-augmented generation (RAG) process.
+1. Data ingestion: Intake data from different data sources. For example, local files, Cloud
+Storage, and Google Drive.
+2. Data transformation (/vertex-ai/generative-ai/docs/fine-tune-rag-transformations):
+Conversion of the data in preparation for indexing. For example, data is split into
+chunks.
+3. Embedding (/vertex-ai/generative-ai/docs/embeddings/get-text-embeddings): Numerical
+representations of words or pieces of text. These numbers capture the semantic
+meaning and context of the text. Similar or related words or text tend to have similar
+embeddings, which means they are closer together in the high-dimensional vector
+space.
+4. Data indexing: Vertex AI RAG Engine creates an index called a corpus
+(/vertex-ai/generative-ai/docs/manage-your-rag-corpus#corpus-management). The index
+
+structures the knowledge base so it's optimized for searching. For example, the index
+is like a detailed table of contents for a massive reference book.
+5. Retrieval: When a user asks a question or provides a prompt, the retrieval component
+in Vertex AI RAG Engine searches through its knowledge base to find information that
+is relevant to the query.
+6. Generation: The retrieved information becomes the context added to the original user
+query as a guide for the generative AI model to generate factually grounded
+(/vertex-ai/generative-ai/docs/grounding/overview) and relevant responses.
+
+https://cloud.google.com/vertex-ai/generative-ai/docs/rag-engine/rag-overview
+
+2/4
+
+02/10/2025, 16:09
+
+Vertex AI RAG Engine overview | Generative AI on Vertex AI | Google Cloud
+
+Supported regions
+Vertex AI RAG Engine is supported in the following regions:
+
+Region
+
+Location
+
+Description
+
+Launch stage
+
+us-central1
+
+Iowa
+
+v1 and v1beta1 versions are supported.
+
+Allowlist
+
+us-east4
+
+Virginia
+
+v1 and v1beta1 versions are supported.
+
+GA
+
+v1 and v1beta1 versions are supported.
+
+GA
+
+europe-west4 Eemshaven, Netherlands v1 and v1beta1 versions are supported.
+
+GA
+
+europe-west3 Frankfurt, Germany
+
+us-central1 is changed to Allowlist. If you'd like to experiment with Vertex AI RAG
+Engine, try other regions. If you plan to onboard your production traffic to uscentral1, contact vertex-ai-rag-engine-support@google.com.
+
+Delete Vertex AI RAG Engine
+The following code samples demonstrate how to delete a Vertex AI RAG Engine for the
+Google Cloud console, Python, and REST:
+Version 1 (v1) API parameters
+(/vertex-ai/generative-ai/docs/model-reference/rag-api-v1#project-management-params-api)
+
+and code samples
+(/vertex-ai/generative-ai/docs/model-reference/rag-apiv1#update_your_ragengineconfig_to_the_unprovisioned_tier)
+
+.
+v1beta1 API parameters
+(/vertex-ai/generative-ai/docs/model-reference/rag-api#project-management-params-api) and
+
+code samples
+(/vertex-ai/generative-ai/docs/model-reference/ragapi#update_your_ragengineconfig_to_the_unprovisioned_tier)
+
+.
+
+Submit feedback
+
+https://cloud.google.com/vertex-ai/generative-ai/docs/rag-engine/rag-overview
+
+3/4
+
+02/10/2025, 16:09
+
+Vertex AI RAG Engine overview | Generative AI on Vertex AI | Google Cloud
+
+To chat with Google support, go to the Vertex AI RAG Engine support group
+(https://groups.google.com/a/google.com/g/vertex-ai-rag-engine-support).
+
+To send an email, use the email address vertex-ai-rag-engine-support@google.com.
+
+What's next
+To learn how to use the Vertex AI SDK to run Vertex AI RAG Engine tasks, see RAG
+quickstart for Python (/vertex-ai/generative-ai/docs/rag-quickstart).
+To learn about grounding, see Grounding overview
+(/vertex-ai/generative-ai/docs/grounding/overview).
+
+To learn more about the responses from RAG, see Retrieval and Generation Output of
+Vertex AI RAG Engine (/vertex-ai/generative-ai/docs/model-reference/rag-output-explained).
+To learn about the RAG architecture:
+Infrastructure for a RAG-capable generative AI application using Vertex AI and
+Vector Search (/architecture/gen-ai-rag-vertex-ai-vector-search)
+Infrastructure for a RAG-capable generative AI application using Vertex AI and
+AlloyDB for PostgreSQL (/architecture/rag-capable-gen-ai-app-using-vertex-ai).
+Except as otherwise noted, the content of this page is licensed under the Creative Commons Attribution 4.0
+License (https://creativecommons.org/licenses/by/4.0/), and code samples are licensed under the Apache
+2.0 License (https://www.apache.org/licenses/LICENSE-2.0). For details, see the Google Developers Site
+Policies (https://developers.google.com/site-policies). Java is a registered trademark of Oracle and/or its
+affiliates.
+Last updated 2025-10-02 UTC.
+
+https://cloud.google.com/vertex-ai/generative-ai/docs/rag-engine/rag-overview
+
+4/4
+
+
