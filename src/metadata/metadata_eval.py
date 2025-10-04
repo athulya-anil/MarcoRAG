@@ -1,23 +1,22 @@
 # src/metadata/metadata_eval.py
 """
-Metadata Evaluation Module
---------------------------
-Analyzes quality and completeness of LLM-generated metadata.
+Lightweight Metadata Evaluation Module
+--------------------------------------
+Prints basic statistics about LLM-generated metadata.
+No CSVs or plots are created.
 
 Usage:
-    python run_metadata_eval.py --metadata_dir metadata_output --visualize
+    python src/metadata/metadata_eval.py
 """
 
 import os
 import json
 import numpy as np
-import pandas as pd
-import matplotlib.pyplot as plt
 from collections import Counter
 from tqdm import tqdm
 
 def analyze_metadata(file_path: str):
-    """Compute statistics for a single metadata file."""
+    """Compute quick summary statistics for a single metadata file."""
     with open(file_path, "r", encoding="utf-8") as f:
         chunks = json.load(f)
 
@@ -35,15 +34,14 @@ def analyze_metadata(file_path: str):
     return {
         "file": os.path.basename(file_path),
         "num_chunks": len(chunks),
-        "avg_completeness": np.mean(completeness),
+        "avg_completeness": round(float(np.mean(completeness)) if completeness else 0, 3),
         "unique_keywords": len(set(keywords)),
-        "top_keywords": [w for w, _ in Counter(keywords).most_common(10)],
-        "category_distribution": Counter(categories)
+        "top_keywords": [w for w, _ in Counter(keywords).most_common(5)],
+        "top_categories": [c for c, _ in Counter(categories).most_common(3)]
     }
 
-
-def run_metadata_evaluation(metadata_dir: str = "metadata_output", visualize: bool = True):
-    """Evaluate all metadata JSON files in a directory."""
+def run_metadata_evaluation(metadata_dir: str = "metadata_output"):
+    """Evaluate all metadata JSON files in a directory and print summary."""
     if not os.path.exists(metadata_dir):
         print(f"❌ Directory not found: {metadata_dir}")
         return
@@ -53,38 +51,20 @@ def run_metadata_evaluation(metadata_dir: str = "metadata_output", visualize: bo
         print("❌ No metadata JSON files found.")
         return
 
-    results = []
     print(f"📊 Evaluating {len(files)} metadata files...\n")
 
     for fname in tqdm(files, ncols=80):
-        stats = analyze_metadata(os.path.join(metadata_dir, fname))
-        results.append(stats)
+        file_path = os.path.join(metadata_dir, fname)
+        stats = analyze_metadata(file_path)
 
-    df = pd.DataFrame(results)
-    print("\n📈 Evaluation Summary:")
-    print(df[["file", "num_chunks", "avg_completeness", "unique_keywords"]])
+        print(f"\n📘 {stats['file']}")
+        print(f"   • Chunks: {stats['num_chunks']}")
+        print(f"   • Avg completeness: {stats['avg_completeness']}")
+        print(f"   • Unique keywords: {stats['unique_keywords']}")
+        print(f"   • Top keywords: {', '.join(stats['top_keywords']) or '—'}")
+        print(f"   • Top categories: {', '.join(stats['top_categories']) or '—'}")
 
-    # Save evaluation summary
-    out_path = os.path.join(metadata_dir, "metadata_eval_summary.csv")
-    df.to_csv(out_path, index=False)
-    print(f"\n✅ Saved summary CSV → {out_path}")
+    print("\n✅ Metadata evaluation completed.\n")
 
-    if visualize:
-        visualize_results(df, metadata_dir)
-
-    return df
-
-
-def visualize_results(df: pd.DataFrame, out_dir: str):
-    """Generate basic visualizations for metadata quality."""
-    plt.figure(figsize=(10, 5))
-    plt.bar(df["file"], df["avg_completeness"], color="teal")
-    plt.xticks(rotation=45, ha="right")
-    plt.ylabel("Average Completeness")
-    plt.title("Metadata Completeness by File")
-    plt.tight_layout()
-    plt.savefig(os.path.join(out_dir, "completeness_chart.png"))
-    plt.close()
-
-    print(f"📊 Saved visualization → {os.path.join(out_dir, 'completeness_chart.png')}")
-
+if __name__ == "__main__":
+    run_metadata_evaluation("metadata_output")
