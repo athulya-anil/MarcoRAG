@@ -8,8 +8,6 @@ from dotenv import load_dotenv
 from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 from groq import Groq
-
-
 from src.chunking.factory import ChunkingFactory
 
 # Disable parallelism warnings
@@ -38,7 +36,7 @@ def embed_documents(docs, model):
 
     for fname, text in docs.items():
         # 🔍 Let the factory auto-select based on content
-        chunker = ChunkingFactory.get_chunker("auto", text=text)
+        chunker = ChunkingFactory.get_chunker("semantic") 
         chunks = chunker.chunk(text, os.path.splitext(fname)[0])
         print(f"📑 {fname}: {len(chunks)} chunks created")
 
