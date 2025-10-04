@@ -9,8 +9,8 @@ from sentence_transformers import SentenceTransformer
 from sklearn.metrics.pairwise import cosine_similarity
 from groq import Groq
 
-# Local import (make sure src/chunking.py exists with SemanticChunker)
-from src.chunking import SemanticChunker
+
+from src.chunking.factory import ChunkingFactory
 
 # Disable parallelism warnings
 os.environ["TOKENIZERS_PARALLELISM"] = "false"
@@ -33,12 +33,13 @@ def load_documents(input_dir: str):
 
 
 def embed_documents(docs, model):
-    """Generate embeddings for semantic chunks"""
+    """Generate embeddings using ML-based auto-selected chunkers."""
     embeddings = []
-    chunker = SemanticChunker(model_name="all-MiniLM-L6-v2")
 
     for fname, text in docs.items():
-        chunks = chunker.chunk_document(text, doc_name=fname)   # ✅ fixed
+        # 🔍 Let the factory auto-select based on content
+        chunker = ChunkingFactory.get_chunker("auto", text=text)
+        chunks = chunker.chunk(text, os.path.splitext(fname)[0])
         print(f"📑 {fname}: {len(chunks)} chunks created")
 
         for c in chunks:
@@ -50,6 +51,7 @@ def embed_documents(docs, model):
                 "embedding": emb
             })
     return embeddings
+
 
 
 def retrieve(query: str, embeddings, model, top_k: int = 3):

@@ -1,1 +1,3 @@
-from .chunking import SemanticChunker
+# src/__init__.py
+from .chunking.factory import ChunkingFactory
+
