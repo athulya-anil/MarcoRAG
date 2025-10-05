@@ -1,0 +1,1058 @@
+[
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_0",
+    "text": "02/10/2025, 16:10",
+    "metadata": {
+      "num_words": 2,
+      "strategy": "structural",
+      "start_index": 0,
+      "end_index": 1,
+      "summary": "Skipped trivial chunk",
+      "entities": [],
+      "keywords": [],
+      "category": "Ignored"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_1",
+    "text": "Topics",
+    "metadata": {
+      "num_words": 1,
+      "strategy": "structural",
+      "start_index": 1,
+      "end_index": 2,
+      "summary": "Skipped trivial chunk",
+      "entities": [],
+      "keywords": [],
+      "category": "Ignored"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_2",
+    "text": "What is Retrieval-Augmented Generation (RAG)? | Google Cloud",
+    "metadata": {
+      "num_words": 8,
+      "strategy": "structural",
+      "start_index": 2,
+      "end_index": 3,
+      "summary": "Retrieval-Augmented Generation (RAG) is a concept that combines retrieval and generation capabilities to improve language models.",
+      "entities": {
+        "RAG": "Retrieval-Augmented Generation",
+        "Google Cloud": "Cloud-based platform"
+      },
+      "keywords": [
+        "Retrieval-Augmented Generation",
+        "RAG",
+        "Language Models",
+        "Google Cloud",
+        "Natural Language Processing",
+        "NLP",
+        "Text Generation"
+      ],
+      "category": "Concept"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_3",
+    "text": "RAG",
+    "metadata": {
+      "num_words": 1,
+      "strategy": "structural",
+      "start_index": 3,
+      "end_index": 4,
+      "summary": "Skipped trivial chunk",
+      "entities": [],
+      "keywords": [],
+      "category": "Ignored"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_4",
+    "text": "What is Retrieval-Augmented Generation\n(RAG)?\nRAG (Retrieval-Augmented Generation) is an AI framework that combines the\nstrengths of traditional information retrieval systems (such as search and\ndatabases) with the capabilities of generative large language models (LLMs).\nBy combining your data and world knowledge with LLM language skills,\ngrounded generation is more accurate, up-to-date, and relevant to your\nspecific needs. Check out this ebook to unlock your \u201cEnterprise Truth.\u201d\nGet started for free",
+    "metadata": {
+      "num_words": 71,
+      "strategy": "structural",
+      "start_index": 4,
+      "end_index": 5,
+      "summary": "RAG (Retrieval-Augmented Generation) is an AI framework that combines information retrieval systems with generative large language models for more accurate and relevant generation.",
+      "entities": [
+        "RAG",
+        "AI framework",
+        "Information Retrieval Systems",
+        "Generative Large Language Models"
+      ],
+      "keywords": [
+        "RAG",
+        "AI",
+        "Information Retrieval",
+        "Generative Models",
+        "Language Models",
+        "Enterprise Truth"
+      ],
+      "category": "CTA"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_5",
+    "text": "35:30\nGrounding for Gemini with Vertex AI Search and DIY RAG",
+    "metadata": {
+      "num_words": 11,
+      "strategy": "structural",
+      "start_index": 5,
+      "end_index": 6,
+      "summary": "This concept discusses grounding Gemini with Vertex AI Search and a DIY Retrieval Augmentation Generator (RAG).",
+      "entities": [
+        "Gemini",
+        "Vertex AI Search",
+        "RAG"
+      ],
+      "keywords": [
+        "Gemini",
+        "Vertex AI Search",
+        "RAG",
+        "grounding",
+        "retrieval augmentation"
+      ],
+      "category": "Concept"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_6",
+    "text": "How does Retrieval-Augmented Generation work?\nRAGs operate with a few main steps to help enhance generative AI outputs:",
+    "metadata": {
+      "num_words": 18,
+      "strategy": "structural",
+      "start_index": 6,
+      "end_index": 7,
+      "summary": "RAGs (Retrieval-Augmented Generation) is a procedure to enhance generative AI outputs through a few main steps.",
+      "entities": [
+        "RAGs",
+        "Retrieval-Augmented Generation"
+      ],
+      "keywords": [
+        "Generative AI",
+        "Retrieval-Augmented Generation",
+        "Enhance Outputs",
+        "AI Outputs",
+        "Main Steps",
+        "Procedure"
+      ],
+      "category": "Procedure"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_7",
+    "text": "https://cloud.google.com/use-cases/retrieval-augmented-generation",
+    "metadata": {
+      "num_words": 1,
+      "strategy": "structural",
+      "start_index": 7,
+      "end_index": 8,
+      "summary": "Skipped trivial chunk",
+      "entities": [],
+      "keywords": [],
+      "category": "Ignored"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_8",
+    "text": "1/7",
+    "metadata": {
+      "num_words": 1,
+      "strategy": "structural",
+      "start_index": 8,
+      "end_index": 9,
+      "summary": "Skipped trivial chunk",
+      "entities": [],
+      "keywords": [],
+      "category": "Ignored"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_9",
+    "text": "02/10/2025, 16:10",
+    "metadata": {
+      "num_words": 2,
+      "strategy": "structural",
+      "start_index": 9,
+      "end_index": 10,
+      "summary": "Skipped trivial chunk",
+      "entities": [],
+      "keywords": [],
+      "category": "Ignored"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_10",
+    "text": "What is Retrieval-Augmented Generation (RAG)? | Google Cloud",
+    "metadata": {
+      "num_words": 8,
+      "strategy": "structural",
+      "start_index": 10,
+      "end_index": 11,
+      "summary": "Retrieval-Augmented Generation (RAG) is a concept that combines retrieval and generation capabilities to improve the accuracy and efficiency of AI models.",
+      "entities": {
+        "RAG": "Retrieval-Augmented Generation",
+        "Google Cloud": "Google Cloud Platform"
+      },
+      "keywords": [
+        "Retrieval-Augmented Generation",
+        "RAG",
+        "Google Cloud",
+        "AI",
+        "Machine Learning",
+        "Natural Language Processing",
+        "NLP",
+        "Text Generation"
+      ],
+      "category": "Concept"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_11",
+    "text": "Retrieval and pre-processing: RAGs leverage powerful search\nalgorithms to query external data, such as web pages, knowledge bases,\nand databases. Once retrieved, the relevant information undergoes preprocessing, including tokenization, stemming, and removal of stop words.\nGrounded generation: The pre-processed retrieved information is then\nseamlessly incorporated into the pre-trained LLM. This integration\nenhances the LLM's context, providing it with a more comprehensive\nunderstanding of the topic. This augmented context enables the LLM to\ngenerate more precise, informative, and engaging responses.",
+    "metadata": {
+      "num_words": 79,
+      "strategy": "structural",
+      "start_index": 11,
+      "end_index": 12,
+      "summary": "RAGs (Relevant Answer Generation) leverage search algorithms to query external data and incorporate it into pre-trained LLMs for more precise and informative responses.",
+      "entities": [
+        "RAGs",
+        "LLMs"
+      ],
+      "keywords": [
+        "RAGs",
+        "LLMs",
+        "search algorithms",
+        "pre-processing",
+        "tokenization",
+        "stemming"
+      ],
+      "category": "Concept"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_12",
+    "text": "Why use RAG?\nRAG offers several advantages augmenting traditional methods of text\ngeneration, especially when dealing with factual information or data-driven\nresponses. Here are some key reasons why using RAG can be beneficial:",
+    "metadata": {
+      "num_words": 33,
+      "strategy": "structural",
+      "start_index": 12,
+      "end_index": 13,
+      "summary": "RAG offers advantages over traditional text generation methods, particularly with factual information or data-driven responses.",
+      "entities": [
+        "RAG"
+      ],
+      "keywords": [
+        "text generation",
+        "RAG",
+        "factual information",
+        "data-driven responses",
+        "traditional methods"
+      ],
+      "category": "Concept"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_13",
+    "text": "Access to fresh information\nLLMs are limited to their pre-trained data. This leads to outdated and\npotentially inaccurate responses. RAG overcomes this by providing up-to-date\ninformation to LLMs.",
+    "metadata": {
+      "num_words": 28,
+      "strategy": "structural",
+      "start_index": 13,
+      "end_index": 14,
+      "summary": "RAG (Retrieval-Augmented Generation) provides up-to-date information to overcome the limitations of pre-trained data in LLMs (Large Language Models).",
+      "entities": {
+        "LLMs": "Large Language Models",
+        "RAG": "Retrieval-Augmented Generation"
+      },
+      "keywords": [
+        "LLMs",
+        "RAG",
+        "Large Language Models",
+        "pre-trained data",
+        "up-to-date information"
+      ],
+      "category": "Concept"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_14",
+    "text": "Factual grounding\nLLMs are powerful tools for generating creative and engaging text, but they\ncan sometimes struggle with factual accuracy. This is because LLMs are\ntrained on massive amounts of text data, which may contain inaccuracies or\nbiases.\nProviding \u201cfacts\u201d to the LLM as part of the input prompt can mitigate \u201cgen AI\nhallucinations.\u201d The crux of this approach is ensuring that the most relevant\nfacts are provided to the LLM, and that the LLM output is entirely grounded on\nthose facts while also answering the user\u2019s question and adhering to system\ninstructions and safety constraints.",
+    "metadata": {
+      "num_words": 96,
+      "strategy": "structural",
+      "start_index": 14,
+      "end_index": 15,
+      "summary": "Factual grounding in LLMs involves providing accurate facts to mitigate 'gen AI hallucinations' and ensure the output is grounded on those facts.",
+      "entities": {
+        "LLMs": "Large Language Models"
+      },
+      "keywords": [
+        "Factual Grounding",
+        "LLMs",
+        "Gen AI Hallucinations",
+        "Text Generation",
+        "Accuracy",
+        "Bias",
+        "Safety Constraints"
+      ],
+      "category": "Concept"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_15",
+    "text": "https://cloud.google.com/use-cases/retrieval-augmented-generation",
+    "metadata": {
+      "num_words": 1,
+      "strategy": "structural",
+      "start_index": 15,
+      "end_index": 16,
+      "summary": "Skipped trivial chunk",
+      "entities": [],
+      "keywords": [],
+      "category": "Ignored"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_16",
+    "text": "2/7",
+    "metadata": {
+      "num_words": 1,
+      "strategy": "structural",
+      "start_index": 16,
+      "end_index": 17,
+      "summary": "Skipped trivial chunk",
+      "entities": [],
+      "keywords": [],
+      "category": "Ignored"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_17",
+    "text": "02/10/2025, 16:10",
+    "metadata": {
+      "num_words": 2,
+      "strategy": "structural",
+      "start_index": 17,
+      "end_index": 18,
+      "summary": "Skipped trivial chunk",
+      "entities": [],
+      "keywords": [],
+      "category": "Ignored"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_18",
+    "text": "What is Retrieval-Augmented Generation (RAG)? | Google Cloud",
+    "metadata": {
+      "num_words": 8,
+      "strategy": "structural",
+      "start_index": 18,
+      "end_index": 19,
+      "summary": "Retrieval-Augmented Generation (RAG) is a concept that combines retrieval and generation capabilities to improve the accuracy and efficiency of AI models.",
+      "entities": {
+        "RAG": "Retrieval-Augmented Generation",
+        "Google Cloud": "Cloud Computing Platform"
+      },
+      "keywords": [
+        "Retrieval-Augmented Generation",
+        "RAG",
+        "Google Cloud",
+        "AI",
+        "Machine Learning",
+        "Natural Language Processing",
+        "Cloud Computing"
+      ],
+      "category": "Concept"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_19",
+    "text": "Using Gemini\u2019s long context window (LCW) is a great way to provide source\nmaterials to the LLM. If you need to provide more information than fits into the\nLCW, or if you need to scale up performance, you can use a RAG approach\nthat will reduce the number of tokens, saving you time and cost.",
+    "metadata": {
+      "num_words": 55,
+      "strategy": "structural",
+      "start_index": 19,
+      "end_index": 20,
+      "summary": "Using Gemini's long context window or a Retrieval Augmented Generator (RAG) approach can help provide source materials to a Large Language Model (LLM) and improve performance.",
+      "entities": [
+        "Gemini",
+        "LLM",
+        "RAG"
+      ],
+      "keywords": [
+        "Large Language Model",
+        "Gemini",
+        "Long Context Window",
+        "RAG",
+        "Retrieval Augmented Generator"
+      ],
+      "category": "Concept"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_20",
+    "text": "Search with vector databases and relevancy re-rankers\nRAGs usually retrieve facts via search, and modern search engines now\nleverage vector databases to efficiently retrieve relevant documents. Vector\ndatabases store documents as embeddings in a high-dimensional space,\nallowing for fast and accurate retrieval based on semantic similarity. Multimodal embeddings can be used for images, audio and video, and more and\nthese media embeddings can be retrieved alongside text embeddings or\nmulti-language embeddings.\nAdvanced search engines like Vertex AI Search use semantic search and\nkeyword search together (called hybrid search), and a re-ranker which scores\nsearch results to ensure the top returned results are the most\nrelevant. Additionally searches perform better with a clear, focused query\nwithout misspellings; so prior to lookup, sophisticated search engines will\ntransform a query and fix spelling mistakes.",
+    "metadata": {
+      "num_words": 131,
+      "strategy": "structural",
+      "start_index": 20,
+      "end_index": 21,
+      "summary": "Vector databases and relevancy re-rankers are used in modern search engines for efficient and accurate retrieval of relevant documents.",
+      "entities": [
+        "Vertex AI Search",
+        "vector databases",
+        "relevancy re-rankers"
+      ],
+      "keywords": [
+        "vector databases",
+        "relevancy re-rankers",
+        "semantic search",
+        "hybrid search",
+        "search engines",
+        "multimodal embeddings"
+      ],
+      "category": "Concept"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_21",
+    "text": "Relevance, accuracy, and quality\nThe retrieval mechanism in RAG is critically important. You need the best\nsemantic search on top of a curated knowledge base to ensure that the\nretrieved information is relevant to the input query or context. If your retrieved\ninformation is irrelevant, your generation could be grounded but off-topic or\nincorrect.\nBy fine-tuning or prompt-engineering the LLM to generate text entirely based\non the retrieved knowledge, RAG helps to minimize contradictions and\ninconsistencies in the generated text. This significantly improves the quality of\nthe generated text, and improves the user experience.\nThe Vertex Eval Service now scores LLM generated text and retrieved chunks\non metrics like \u201ccoherence,\u201d \u201cfluency,\u201d \u201cgroundedness,\u201d \"safety,\"\n\u201cinstruction_following,\u201d \u201cquestion_answering_quality,\u201d and more. These\nhttps://cloud.google.com/use-cases/retrieval-augmented-generation",
+    "metadata": {
+      "num_words": 119,
+      "strategy": "structural",
+      "start_index": 21,
+      "end_index": 22,
+      "summary": "RAG (Retrieval-Augmented Generation) improves the quality and relevance of generated text by fine-tuning LLMs with a curated knowledge base and evaluating generated text on various metrics.",
+      "entities": [
+        "RAG",
+        "LLMs",
+        "Vertex Eval Service"
+      ],
+      "keywords": [
+        "Retrieval-Augmented Generation",
+        "Knowledge Base",
+        "LLMs",
+        "Quality",
+        "Relevance",
+        "Generated Text",
+        "Evaluation Metrics"
+      ],
+      "category": "Concept"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_22",
+    "text": "3/7",
+    "metadata": {
+      "num_words": 1,
+      "strategy": "structural",
+      "start_index": 22,
+      "end_index": 23,
+      "summary": "Skipped trivial chunk",
+      "entities": [],
+      "keywords": [],
+      "category": "Ignored"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_23",
+    "text": "02/10/2025, 16:10",
+    "metadata": {
+      "num_words": 2,
+      "strategy": "structural",
+      "start_index": 23,
+      "end_index": 24,
+      "summary": "Skipped trivial chunk",
+      "entities": [],
+      "keywords": [],
+      "category": "Ignored"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_24",
+    "text": "What is Retrieval-Augmented Generation (RAG)? | Google Cloud",
+    "metadata": {
+      "num_words": 8,
+      "strategy": "structural",
+      "start_index": 24,
+      "end_index": 25,
+      "summary": "Retrieval-Augmented Generation (RAG) is a concept that combines retrieval and generation capabilities to improve the accuracy and efficiency of AI models.",
+      "entities": [
+        "Google Cloud",
+        "Retrieval-Augmented Generation (RAG)"
+      ],
+      "keywords": [
+        "Retrieval-Augmented Generation",
+        "RAG",
+        "Google Cloud",
+        "AI",
+        "Machine Learning",
+        "Natural Language Processing",
+        "Text Generation"
+      ],
+      "category": "Concept"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_25",
+    "text": "metrics help you measure the grounded text you get from the LLM (for some\nmetrics that is a comparison to a ground truth answer you have\nprovided). Implementing these evaluations gives you a baseline measurement\nand you can optimize for RAG quality by configuring your search engine,\ncurating your source data, improving source layout parsing or chunking\nstrategies, or refining the user\u2019s question prior to search. A RAG Ops, metrics\ndriven approach like this will help you hill climb to high quality RAG and\ngrounded generation.",
+    "metadata": {
+      "num_words": 86,
+      "strategy": "structural",
+      "start_index": 25,
+      "end_index": 26,
+      "summary": "Metrics help measure the quality of grounded text generated by LLMs, enabling optimization for RAG quality through various configurations.",
+      "entities": [
+        "LLM",
+        "RAG",
+        "Ops"
+      ],
+      "keywords": [
+        "metrics",
+        "grounded text",
+        "LLM",
+        "RAG",
+        "quality",
+        "optimization",
+        "search engine",
+        "source data"
+      ],
+      "category": "Concept"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_26",
+    "text": "RAGs, agents, and chatbots\nRAG and grounding can be integrated into any LLM application or agent which\nneeds access to fresh, private, or specialized data. By accessing external\ninformation, RAG-powered chatbots and conversational agents leverage\nexternal knowledge to provide more comprehensive, informative, and contextaware responses, improving the overall user experience.\nYour data and your use case are what differentiate what you are building with\ngen AI. RAG and grounding bring your data to LLMs efficiently and scalably.",
+    "metadata": {
+      "num_words": 77,
+      "strategy": "structural",
+      "start_index": 26,
+      "end_index": 27,
+      "summary": "RAGs (Reptile Agents) can be integrated into LLM applications to access external information, enhancing user experience with more comprehensive and context-aware responses.",
+      "entities": [
+        "RAGs",
+        "LLMs",
+        "RAG",
+        "grounding"
+      ],
+      "keywords": [
+        "RAGs",
+        "LLMs",
+        "conversational agents",
+        "chatbots",
+        "external knowledge",
+        "gen AI"
+      ],
+      "category": "Concept"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_27",
+    "text": "What Google Cloud products and services are related to\nRAG?\nThe following Google Cloud products are related to Retrieval-Augmented Generation:",
+    "metadata": {
+      "num_words": 20,
+      "strategy": "structural",
+      "start_index": 27,
+      "end_index": 28,
+      "summary": "This text discusses the Google Cloud products and services related to Retrieval-Augmented Generation (RAG).",
+      "entities": {
+        "products": [
+          "Google Cloud",
+          "Retrieval-Augmented Generation (RAG)"
+        ]
+      },
+      "keywords": [
+        "Google Cloud",
+        "Retrieval-Augmented Generation",
+        "RAG",
+        "NLP",
+        "AI",
+        "Cloud Services",
+        "Machine Learning"
+      ],
+      "category": "Concept"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_28",
+    "text": "Vertex AI RAG Engine\nData framework for developing context-augmented LLM applications, and\nfacilitates retrieval-augmented generation (RAG.)",
+    "metadata": {
+      "num_words": 16,
+      "strategy": "structural",
+      "start_index": 28,
+      "end_index": 29,
+      "summary": "Vertex AI RAG Engine is a data framework for developing context-augmented LLM applications, specifically facilitating retrieval-augmented generation (RAG).",
+      "entities": [
+        "Vertex AI RAG Engine",
+        "LLM",
+        "RAG"
+      ],
+      "keywords": [
+        "Vertex AI",
+        "RAG Engine",
+        "LLM",
+        "NLP",
+        "Data Framework",
+        "Context-Augmented",
+        "Retrieval-Augmented Generation"
+      ],
+      "category": "Concept"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_29",
+    "text": "https://cloud.google.com/use-cases/retrieval-augmented-generation",
+    "metadata": {
+      "num_words": 1,
+      "strategy": "structural",
+      "start_index": 29,
+      "end_index": 30,
+      "summary": "Skipped trivial chunk",
+      "entities": [],
+      "keywords": [],
+      "category": "Ignored"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_30",
+    "text": "4/7",
+    "metadata": {
+      "num_words": 1,
+      "strategy": "structural",
+      "start_index": 30,
+      "end_index": 31,
+      "summary": "Skipped trivial chunk",
+      "entities": [],
+      "keywords": [],
+      "category": "Ignored"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_31",
+    "text": "02/10/2025, 16:10",
+    "metadata": {
+      "num_words": 2,
+      "strategy": "structural",
+      "start_index": 31,
+      "end_index": 32,
+      "summary": "Skipped trivial chunk",
+      "entities": [],
+      "keywords": [],
+      "category": "Ignored"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_32",
+    "text": "What is Retrieval-Augmented Generation (RAG)? | Google Cloud",
+    "metadata": {
+      "num_words": 8,
+      "strategy": "structural",
+      "start_index": 32,
+      "end_index": 33,
+      "summary": "Retrieval-Augmented Generation (RAG) is a concept that combines retrieval and generation capabilities to improve the accuracy and efficiency of AI models.",
+      "entities": {
+        "products": [
+          "Google Cloud"
+        ],
+        "technologies": [
+          "Retrieval-Augmented Generation (RAG)"
+        ]
+      },
+      "keywords": [
+        "Retrieval-Augmented Generation",
+        "RAG",
+        "Google Cloud",
+        "AI",
+        "Machine Learning",
+        "Natural Language Processing",
+        "NLP"
+      ],
+      "category": "Concept"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_33",
+    "text": "Vertex AI Search\nVertex AI Search is Google Search for your data, a fully managed, out-of-thebox search and RAG builder.",
+    "metadata": {
+      "num_words": 20,
+      "strategy": "structural",
+      "start_index": 33,
+      "end_index": 34,
+      "summary": "Vertex AI Search is a fully managed search and RAG builder service provided by Google.",
+      "entities": {
+        "products": [
+          "Vertex AI Search",
+          "Google Search"
+        ],
+        "technologies": [
+          "RAG builder"
+        ]
+      },
+      "keywords": [
+        "search",
+        "RAG builder",
+        "Vertex AI",
+        "Google Cloud",
+        "managed service",
+        "data search"
+      ],
+      "category": "Concept"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_34",
+    "text": "Vertex AI Vector Search\nThe ultra performant vector index that powers Vertex AI Search; it enables\nsemantic and hybrid search and retrieval from huge collections of embeddings\nwith high recall at high query rate.",
+    "metadata": {
+      "num_words": 34,
+      "strategy": "structural",
+      "start_index": 34,
+      "end_index": 35,
+      "summary": "Vertex AI Vector Search is an ultra-performant vector index that enables semantic and hybrid search from large collections of embeddings.",
+      "entities": [
+        "Vertex AI Vector Search",
+        "Vertex AI Search"
+      ],
+      "keywords": [
+        "vector search",
+        "semantic search",
+        "hybrid search",
+        "embeddings",
+        "Vertex AI"
+      ],
+      "category": "Concept"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_35",
+    "text": "BigQuery\nLarge datasets that you can use to train machine learning models, including\nmodels for Vertex AI Vector Search.",
+    "metadata": {
+      "num_words": 19,
+      "strategy": "structural",
+      "start_index": 35,
+      "end_index": 36,
+      "summary": "BigQuery can be used to train machine learning models, including those for Vertex AI Vector Search.",
+      "entities": [
+        "BigQuery",
+        "Vertex AI Vector Search"
+      ],
+      "keywords": [
+        "BigQuery",
+        "machine learning",
+        "Vertex AI",
+        "Vector Search",
+        "data storage",
+        "training models"
+      ],
+      "category": "Concept"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_36",
+    "text": "Grounded Generation API\nhttps://cloud.google.com/use-cases/retrieval-augmented-generation",
+    "metadata": {
+      "num_words": 4,
+      "strategy": "structural",
+      "start_index": 36,
+      "end_index": 37,
+      "summary": "A reference to the Grounded Generation API, a retrieval-augmented generation use case on Google Cloud.",
+      "entities": {
+        "Grounded Generation API": "API",
+        "Google Cloud": "Platform"
+      },
+      "keywords": [
+        "Grounded Generation",
+        "API",
+        "Retrieval-Augmented Generation",
+        "Google Cloud",
+        "NLP",
+        "AI"
+      ],
+      "category": "Reference"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_37",
+    "text": "5/7",
+    "metadata": {
+      "num_words": 1,
+      "strategy": "structural",
+      "start_index": 37,
+      "end_index": 38,
+      "summary": "Skipped trivial chunk",
+      "entities": [],
+      "keywords": [],
+      "category": "Ignored"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_38",
+    "text": "02/10/2025, 16:10",
+    "metadata": {
+      "num_words": 2,
+      "strategy": "structural",
+      "start_index": 38,
+      "end_index": 39,
+      "summary": "Skipped trivial chunk",
+      "entities": [],
+      "keywords": [],
+      "category": "Ignored"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_39",
+    "text": "What is Retrieval-Augmented Generation (RAG)? | Google Cloud",
+    "metadata": {
+      "num_words": 8,
+      "strategy": "structural",
+      "start_index": 39,
+      "end_index": 40,
+      "summary": "Retrieval-Augmented Generation (RAG) is a concept that combines retrieval and generation capabilities for improved performance in natural language processing tasks.",
+      "entities": {
+        "products": [
+          "Google Cloud"
+        ],
+        "technologies": [
+          "Retrieval-Augmented Generation (RAG)"
+        ]
+      },
+      "keywords": [
+        "Retrieval-Augmented Generation",
+        "RAG",
+        "Natural Language Processing",
+        "NLP",
+        "Google Cloud"
+      ],
+      "category": "Concept"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_40",
+    "text": "Gemini high-fidelity mode grounded with Google Search or inline facts or bring\nyour own search engine.",
+    "metadata": {
+      "num_words": 16,
+      "strategy": "structural",
+      "start_index": 40,
+      "end_index": 41,
+      "summary": "Gemini high-fidelity mode can be grounded with Google Search, inline facts, or a custom search engine.",
+      "entities": {
+        "Gemini": "product",
+        "Google Search": "API/technology"
+      },
+      "keywords": [
+        "Gemini",
+        "high-fidelity",
+        "mode",
+        "grounding",
+        "search",
+        "engine"
+      ],
+      "category": "Concept"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_41",
+    "text": "AlloyDB AI\nRun models in Vertex AI and access them in your application using familiar SQL\nqueries. Use Google models, such as Gemini, or your own custom models.",
+    "metadata": {
+      "num_words": 28,
+      "strategy": "structural",
+      "start_index": 41,
+      "end_index": 42,
+      "summary": "AlloyDB AI allows users to run machine learning models in Vertex AI and access them using SQL queries.",
+      "entities": [
+        "AlloyDB AI",
+        "Vertex AI",
+        "Gemini"
+      ],
+      "keywords": [
+        "AlloyDB AI",
+        "Vertex AI",
+        "Machine Learning",
+        "SQL",
+        "Gemini"
+      ],
+      "category": "Concept"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_42",
+    "text": "Further reading\nLearn more about using retrieval augmented generation with these resources.\nUsing Vertex AI to build next-gen search applications\nRAGs powered by Google Search technology\nRAG with databases on Google Cloud\nAPIs to build your own search and Retrieval Augmented Generation (RAG)\nsystems\nHow to use RAG in BigQuery to bolster LLMs\nCode sample and quickstart to get familiar with RAG\nInfrastructure for a RAG-capable generative AI application using Vertex AI\nand Vector Search\nInfrastructure for a RAG-capable generative AI application using Vertex AI\nand AlloyDB for PostgreSQL\nInfrastructure for a RAG-capable generative AI application using GKE",
+    "metadata": {
+      "num_words": 98,
+      "strategy": "structural",
+      "start_index": 42,
+      "end_index": 43,
+      "summary": "This section provides resources and guides for implementing Retrieval Augmented Generation (RAG) using Google Cloud services.",
+      "entities": [
+        "Vertex AI",
+        "Google Search",
+        "Google Cloud",
+        "BigQuery",
+        "RAG",
+        "LLMs",
+        "AlloyDB",
+        "GKE",
+        "Vector Search"
+      ],
+      "keywords": [
+        "Retrieval Augmented Generation",
+        "Google Cloud",
+        "Vertex AI",
+        "BigQuery",
+        "AlloyDB",
+        "GKE",
+        "Vector Search",
+        "LLMs"
+      ],
+      "category": "Procedure"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_43",
+    "text": "Take the next step\nStart building on Google Cloud with $300 in free credits and 20+ always free\nproducts.\nhttps://cloud.google.com/use-cases/retrieval-augmented-generation",
+    "metadata": {
+      "num_words": 20,
+      "strategy": "structural",
+      "start_index": 43,
+      "end_index": 44,
+      "summary": "Google Cloud offers $300 in free credits and 20+ always free products to help users get started.",
+      "entities": [
+        "Google Cloud"
+      ],
+      "keywords": [
+        "Google Cloud",
+        "free credits",
+        "always free products",
+        "cloud computing"
+      ],
+      "category": "Concept"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_44",
+    "text": "6/7",
+    "metadata": {
+      "num_words": 1,
+      "strategy": "structural",
+      "start_index": 44,
+      "end_index": 45,
+      "summary": "Skipped trivial chunk",
+      "entities": [],
+      "keywords": [],
+      "category": "Ignored"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_45",
+    "text": "02/10/2025, 16:10",
+    "metadata": {
+      "num_words": 2,
+      "strategy": "structural",
+      "start_index": 45,
+      "end_index": 46,
+      "summary": "Skipped trivial chunk",
+      "entities": [],
+      "keywords": [],
+      "category": "Ignored"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_46",
+    "text": "What is Retrieval-Augmented Generation (RAG)? | Google Cloud",
+    "metadata": {
+      "num_words": 8,
+      "strategy": "structural",
+      "start_index": 46,
+      "end_index": 47,
+      "summary": "Retrieval-Augmented Generation (RAG) is a concept that combines retrieval and generation capabilities to improve the accuracy and efficiency of AI models.",
+      "entities": {
+        "products": [
+          "Google Cloud"
+        ],
+        "technologies": [
+          "Retrieval-Augmented Generation (RAG)"
+        ]
+      },
+      "keywords": [
+        "Retrieval-Augmented Generation",
+        "RAG",
+        "Google Cloud",
+        "AI",
+        "Machine Learning",
+        "Natural Language Processing",
+        "Text Generation"
+      ],
+      "category": "Concept"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_47",
+    "text": "Get started for free",
+    "metadata": {
+      "num_words": 4,
+      "strategy": "structural",
+      "start_index": 47,
+      "end_index": 48,
+      "summary": "An invitation to begin using a service without cost.",
+      "entities": [],
+      "keywords": [
+        "free",
+        "start",
+        "service",
+        "begin",
+        "invitation",
+        "cost"
+      ],
+      "category": "CTA"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_48",
+    "text": "Need help getting started?\nContact sales\nWork with a trusted partner\nFind a partner\nContinue browsing\nSee all products",
+    "metadata": {
+      "num_words": 19,
+      "strategy": "structural",
+      "start_index": 48,
+      "end_index": 49,
+      "summary": "This is a starting point for users who need assistance or want to explore products.",
+      "entities": [],
+      "keywords": [
+        "getting started",
+        "sales",
+        "partner",
+        "products"
+      ],
+      "category": "Concept"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_49",
+    "text": "https://cloud.google.com/use-cases/retrieval-augmented-generation",
+    "metadata": {
+      "num_words": 1,
+      "strategy": "structural",
+      "start_index": 49,
+      "end_index": 50,
+      "summary": "Skipped trivial chunk",
+      "entities": [],
+      "keywords": [],
+      "category": "Ignored"
+    }
+  },
+  {
+    "chunk_id": "RAG_Google_Cloud_structural_50",
+    "text": "7/7",
+    "metadata": {
+      "num_words": 1,
+      "strategy": "structural",
+      "start_index": 50,
+      "end_index": 51,
+      "summary": "Skipped trivial chunk",
+      "entities": [],
+      "keywords": [],
+      "category": "Ignored"
+    }
+  }
+]
