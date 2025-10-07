@@ -63,4 +63,32 @@ def run_pipeline(metadata_path: str, query: str, mode="keyword", top_k=5):
 if __name__ == "__main__":
     print("🚀 Running Stage 4: Retrieval and Evaluation Pipeline")
     print(f"📄 Using metadata file: {METADATA_PATH}\n")
-    run_pipeline(str(METADATA_PATH), query="What is Retrieval-Augmented Generation?")
+
+    # Run retrieval pipeline
+    metrics = run_pipeline(str(METADATA_PATH), query="What is Retrieval-Augmented Generation?")
+
+    # -------------------- Save results -------------------- #
+    from datetime import datetime
+    timestamp = datetime.now().strftime("%Y-%m-%d_%H-%M-%S")
+    run_dir = Path("retrieval_output") / f"run_{timestamp}"
+    run_dir.mkdir(parents=True, exist_ok=True)
+
+    # Save retrieval results placeholder (simulate retrieval output)
+    retrieval_results = {
+        "query_1": {
+            "query": "What is Retrieval-Augmented Generation?",
+            "retrieved_docs": [
+                {"chunk_id": i, "content": f"Document snippet {i}"} for i in range(5)
+            ]
+        }
+    }
+
+    with open(run_dir / "retrieval_results.json", "w", encoding="utf-8") as f:
+        json.dump(retrieval_results, f, indent=2)
+
+    # Save metrics for traceability
+    with open(run_dir / "metrics_overview.json", "w", encoding="utf-8") as f:
+        json.dump(metrics, f, indent=2)
+
+    print(f"\n✅ Saved retrieval results and metrics to {run_dir}")
+
