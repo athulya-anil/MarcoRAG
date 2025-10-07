@@ -7,7 +7,7 @@ import os
 import json
 from pathlib import Path
 from datetime import datetime
-from groq import Groq  # requires GROQ_API_KEY in env
+from groq import Groq 
 
 
 def load_retrieval(base_dir="retrieval_output"):
@@ -21,9 +21,9 @@ def load_retrieval(base_dir="retrieval_output"):
     return data, latest
 
 
-def generate_answer_groq(prompt, model="llama3-70b-8192"):
+def generate_answer_groq(prompt, model="llama-3.3-70b-versatile"):
     """Query Groq LLaMA-3 with a factual prompt."""
-    client = Groq()  # uses GROQ_API_KEY automatically
+    client = Groq() 
     completion = client.chat.completions.create(
         model=model,
         messages=[
