@@ -16,8 +16,11 @@ os.environ["TOKENIZERS_PARALLELISM"] = "false"
 # Load environment variables
 load_dotenv()
 
-# Init Groq client
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+# Init Groq client with validation
+api_key = os.getenv("GROQ_API_KEY")
+if not api_key:
+    raise ValueError("❌ GROQ_API_KEY environment variable not set. Please set it in your .env file.")
+client = Groq(api_key=api_key)
 
 
 def load_documents(input_dir: str):

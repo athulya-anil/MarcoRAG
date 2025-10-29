@@ -9,11 +9,17 @@ from src.embeddings.base_embedder import BaseEmbedder
 
 class PrefixFusionEmbedder(BaseEmbedder):
     def prepare_text(self, chunk):
+        # Handle metadata stored in 'metadata' dict or at top level
+        metadata = chunk.get('metadata', chunk)
+
         prefix_parts = [
-            f"[Category: {chunk.get('category', 'N/A')}]",
-            f"[Keywords: {', '.join(chunk.get('keywords', []))}]",
-            f"[Summary: {chunk.get('summary', '')}]"
+            f"[Category: {metadata.get('category', 'N/A')}]",
+            f"[Keywords: {', '.join(metadata.get('keywords', []))}]",
+            f"[Summary: {metadata.get('summary', '')}]"
         ]
         prefix = " ".join(prefix_parts)
-        return f"{prefix} {chunk.get('content', '')}"
+
+        # Support both 'text' and 'content' field names
+        content = chunk.get('text', chunk.get('content', ''))
+        return f"{prefix} {content}"
 

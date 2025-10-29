@@ -19,7 +19,12 @@ from dotenv import load_dotenv
 from groq import Groq
 
 load_dotenv()
-client = Groq(api_key=os.getenv("GROQ_API_KEY"))
+
+# Validate API key
+api_key = os.getenv("GROQ_API_KEY")
+if not api_key:
+    raise ValueError("❌ GROQ_API_KEY environment variable not set. Please set it in your .env file.")
+client = Groq(api_key=api_key)
 
 # ---------------- Helper Utilities ---------------- #
 
@@ -98,8 +103,17 @@ Return valid JSON only.
             parsed = _safe_json_parse(content)
             if isinstance(parsed, dict):
                 return parsed
+        except (ConnectionError, TimeoutError) as e:
+            # Network-related errors - retry
+            print(f"⚠️ Network error (attempt {attempt+1}/3): {e}")
+            time.sleep(2 ** attempt)  # Exponential backoff
+        except json.JSONDecodeError as e:
+            # JSON parsing error - retry with different attempt
+            print(f"⚠️ JSON parsing error (attempt {attempt+1}/3): {e}")
+            time.sleep(1)
         except Exception as e:
-            print(f"⚠️ Retry {attempt+1}/3: {e}")
+            # Other errors - log and retry
+            print(f"⚠️ Unexpected error (attempt {attempt+1}/3): {type(e).__name__}: {e}")
             time.sleep(1)
     return {"summary": "", "entities": [], "keywords": [], "category": pre_category or "Unknown"}
 

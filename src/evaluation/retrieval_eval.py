@@ -1,67 +1,92 @@
-# src/evaluation/retrieval_eval.py
+"""
+Retrieval Evaluation (Stage 6)
+------------------------------
+Evaluates retrieval performance using latest run outputs.
+Computes Precision@K, Recall@K, MRR, and NDCG@K metrics.
+"""
+
 import os
 import json
-import math
-from pathlib import Path
 import numpy as np
+from pathlib import Path
+from datetime import datetime
+from src.retrieval.grounding_eval import recall_at_k, precision_at_k, ndcg_at_k
 
-def load_results(base_dir="retrieval_output"):
-    run_dirs = sorted(Path(base_dir).glob("run_*"), key=os.path.getmtime)
-    if not run_dirs:
-        raise FileNotFoundError("No retrieval runs found.")
-    latest = run_dirs[-1]
-    ret_path = latest / "retrieval_results.json"
-    gt_path = latest / "ground_truth" / "gt.json"
-    with open(ret_path) as f1, open(gt_path) as f2:
-        return json.load(f1), json.load(f2), latest
 
-def precision_at_k(retrieved, relevant, k):
-    retrieved_k = retrieved[:k]
-    return len(set(retrieved_k) & set(relevant)) / k
+# -------------------- Helper -------------------- #
+def load_latest_run(base_dir="retrieval_output"):
+    """Automatically locate the latest retrieval run with a ground truth file."""
+    run_dirs = sorted(Path(base_dir).glob("run_*"), key=os.path.getmtime, reverse=True)
+    for run_dir in run_dirs:
+        ret_path = run_dir / "retrieval_results.json"
+        gt_path = run_dir / "ground_truth" / "gt.json"
+        if ret_path.exists() and gt_path.exists():
+            return ret_path, gt_path, run_dir
+    raise FileNotFoundError("❌ No valid run found in retrieval_output/ with ground_truth/gt.json.")
 
-def recall_at_k(retrieved, relevant, k):
-    retrieved_k = retrieved[:k]
-    return len(set(retrieved_k) & set(relevant)) / max(1, len(relevant))
 
-def mrr(retrieved, relevant):
-    for i, doc in enumerate(retrieved, 1):
-        if doc in relevant:
-            return 1 / i
-    return 0.0
-
-def ndcg_at_k(retrieved, relevant, k):
-    dcg, idcg = 0.0, 0.0
-    for i, doc in enumerate(retrieved[:k], 1):
-        if doc in relevant:
-            dcg += 1 / math.log2(i + 1)
-    for i in range(min(k, len(relevant))):
-        idcg += 1 / math.log2(i + 2)
-    return dcg / idcg if idcg > 0 else 0.0
-
+# -------------------- Evaluation -------------------- #
 def evaluate_retrieval():
-    retrieval, ground_truth, run_dir = load_results()
+    """Evaluate retrieval using ground truth and retrieved results."""
+    ret_path, gt_path, run_dir = load_latest_run()
+
+    print(f"📂 Evaluating run: {run_dir.name}")
+    print(f"📄 Retrieval file: {ret_path}")
+    print(f"📄 Ground truth file: {gt_path}\n")
+
+    with open(ret_path, "r", encoding="utf-8") as f1:
+        retrieval_data = json.load(f1)
+    with open(gt_path, "r", encoding="utf-8") as f2:
+        ground_truth_data = json.load(f2)
+
+    results = {}
+    k = 5
+
+    for qid, qinfo in retrieval_data.items():
+        retrieved = qinfo["retrieved_docs"]
+        retrieved_ids = [r["chunk_id"] for r in retrieved]
+
+        gt_entry = ground_truth_data.get(qid, {})
+        ground_truth_ids = gt_entry.get("relevant_chunk_ids", [])
+
+        if not ground_truth_ids:
+            continue
+
+        metrics = {
+            "Precision@5": precision_at_k(ground_truth_ids, retrieved_ids, k),
+            "Recall@5": recall_at_k(ground_truth_ids, retrieved_ids, k),
+            "MRR": compute_mrr(ground_truth_ids, retrieved_ids),
+            "NDCG@5": ndcg_at_k(ground_truth_ids, retrieved_ids, k)
+        }
+        results[qid] = metrics
+
+    # Aggregate mean metrics
+    if not results:
+        print("⚠️  No valid results to evaluate")
+        return {}
+
+    avg_metrics = {metric: np.mean([res[metric] for res in results.values()])
+                   for metric in results[next(iter(results))].keys()}
+
+    # Save metrics
     eval_dir = run_dir / "evaluation"
     eval_dir.mkdir(parents=True, exist_ok=True)
-    out_path = eval_dir / "metrics.json"
+    with open(eval_dir / "metrics.json", "w", encoding="utf-8") as f:
+        json.dump(avg_metrics, f, indent=2)
 
-    metrics = {"Precision@5": [], "Recall@5": [], "MRR": [], "NDCG@5": []}
+    print("✅ Evaluation complete. Metrics saved to", eval_dir / "metrics.json")
+    print(json.dumps(avg_metrics, indent=2))
+    return avg_metrics
 
-    for qid, gt in ground_truth.items():
-        if qid not in retrieval:
-            continue
-        retrieved_docs = [d["content"] for d in retrieval[qid]["retrieved_docs"]]
-        relevant_docs = [d["content"] for d in gt["docs"][:3]]  # top 3 as relevant
-        metrics["Precision@5"].append(precision_at_k(retrieved_docs, relevant_docs, 5))
-        metrics["Recall@5"].append(recall_at_k(retrieved_docs, relevant_docs, 5))
-        metrics["MRR"].append(mrr(retrieved_docs, relevant_docs))
-        metrics["NDCG@5"].append(ndcg_at_k(retrieved_docs, relevant_docs, 5))
 
-    avg = {k: float(np.mean(v)) for k, v in metrics.items()}
-    with open(out_path, "w") as f:
-        json.dump({"per_query": metrics, "average": avg}, f, indent=2)
-    print(f"✅ Evaluation complete. Metrics saved to {out_path}")
-    print(json.dumps(avg, indent=2))
+def compute_mrr(ground_truth_ids, retrieved_ids):
+    """Compute Mean Reciprocal Rank."""
+    for rank, rid in enumerate(retrieved_ids, start=1):
+        if rid in ground_truth_ids:
+            return 1.0 / rank
+    return 0.0
 
+
+# -------------------- Run -------------------- #
 if __name__ == "__main__":
     evaluate_retrieval()
-

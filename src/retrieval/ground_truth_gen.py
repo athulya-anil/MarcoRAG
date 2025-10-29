@@ -8,7 +8,9 @@ from pathlib import Path
 from sentence_transformers import CrossEncoder, util
 from datetime import datetime
 
+
 def load_retrieval_output(base_dir="retrieval_output"):
+    """Load the most recent retrieval results."""
     run_dirs = sorted(Path(base_dir).glob("run_*"), key=os.path.getmtime)
     if not run_dirs:
         raise FileNotFoundError("No retrieval run found in retrieval_output/.")
@@ -16,18 +18,27 @@ def load_retrieval_output(base_dir="retrieval_output"):
     retrieval_file = latest / "retrieval_results.json"
     if not retrieval_file.exists():
         raise FileNotFoundError(f"No retrieval_results.json found in {latest}")
-    with open(retrieval_file) as f:
+    with open(retrieval_file, "r", encoding="utf-8") as f:
         data = json.load(f)
     return data, latest
 
+
 def rerank_cross_encoder(query, docs, model):
-    pairs = [(query, d) for d in docs]
+    """Rerank docs using a cross-encoder model."""
+    pairs = [(query, d["text"]) for d in docs if d.get("text")]
+    if not pairs:
+        return [], []
     scores = model.predict(pairs)
-    return np.argsort(-np.array(scores)), scores.tolist()
+    order = np.argsort(-np.array(scores))
+    return order, scores.tolist()
+
 
 def cosine_fallback(query_emb, doc_embs):
+    """Fallback reranking using cosine similarity."""
     sims = util.cos_sim(query_emb, doc_embs).cpu().numpy()[0]
-    return np.argsort(-sims), sims.tolist()
+    order = np.argsort(-sims)
+    return order, sims.tolist()
+
 
 def generate_ground_truth():
     print("🔍 Loading retrieval results...")
@@ -37,7 +48,8 @@ def generate_ground_truth():
     gt_path = gt_dir / "gt.json"
 
     try:
-        reranker = CrossEncoder("cross-encoder/ms-marco-MiniLM-L-6-v2", device="cuda" if torch.cuda.is_available() else "cpu")
+        reranker = CrossEncoder("cross-encoder/ms-marco-MiniLM-L-6-v2",
+                                device="cuda" if torch.cuda.is_available() else "cpu")
         print("✅ Using cross-encoder reranker.")
         use_ce = True
     except Exception:
@@ -48,8 +60,15 @@ def generate_ground_truth():
 
     gt_data = {}
     for qid, qinfo in retrieval_data.items():
-        query = qinfo["query"]
-        docs = [d["content"] for d in qinfo["retrieved_docs"]]
+        query = qinfo.get("query", "")
+        retrieved_docs = qinfo.get("retrieved_docs", [])
+
+        if not retrieved_docs:
+            continue
+
+        # keep only top N docs for reranking
+        docs = [{"chunk_id": d.get("chunk_id", ""), "text": d.get("text", "")}
+                for d in retrieved_docs if d.get("text")]
 
         if not docs:
             continue
@@ -57,20 +76,32 @@ def generate_ground_truth():
         if use_ce:
             order, scores = rerank_cross_encoder(query, docs, reranker)
         else:
+            from sentence_transformers import SentenceTransformer
             q_emb = embedder.encode(query, convert_to_tensor=True)
-            d_embs = embedder.encode(docs, convert_to_tensor=True)
+            d_embs = embedder.encode([d["text"] for d in docs], convert_to_tensor=True)
             order, scores = cosine_fallback(q_emb, d_embs)
+
+        # build proper ground truth
+        ranked = []
+        for rank, idx in enumerate(order):
+            ranked.append({
+                "rank": int(rank + 1),
+                "chunk_id": docs[idx]["chunk_id"],
+                "text": docs[idx]["text"],
+                "score": float(scores[idx])
+            })
 
         gt_data[qid] = {
             "query": query,
-            "docs": [{"rank": int(i+1), "content": docs[idx], "score": float(scores[idx])}
-                     for i, idx in enumerate(order)]
+            "relevant_chunk_ids": [r["chunk_id"] for r in ranked[:5]],  # top-5 as ground truth
+            "reranked_docs": ranked
         }
 
-    with open(gt_path, "w") as f:
+    with open(gt_path, "w", encoding="utf-8") as f:
         json.dump(gt_data, f, indent=2)
+
     print(f"✅ Ground truth saved to {gt_path}")
+
 
 if __name__ == "__main__":
     generate_ground_truth()
-

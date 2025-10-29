@@ -1,0 +1,604 @@
+{
+  "average_metrics": {
+    "recall@5": 0.9090909090909091,
+    "precision@5": 0.18181818181818182,
+    "ndcg@5": 0.698118588541045
+  },
+  "per_query_results": {
+    "query_0": {
+      "query": ")what was the immediate impact of the success of the manhattan project?",
+      "retrieved": [
+        "passage_0",
+        "passage_1",
+        "passage_2",
+        "passage_7",
+        "passage_3"
+      ],
+      "ground_truth": [
+        "passage_0"
+      ],
+      "metrics": {
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0
+      }
+    },
+    "query_1": {
+      "query": "_________ justice is designed to repair the harm to victim, the community and the offender caused by the offender criminal act. question 19 options:",
+      "retrieved": [
+        "passage_11",
+        "passage_12",
+        "passage_15",
+        "passage_16",
+        "passage_13"
+      ],
+      "ground_truth": [
+        "passage_16"
+      ],
+      "metrics": {
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 0.43067655807339306
+      }
+    },
+    "query_2": {
+      "query": "why did stalin want control of eastern europe",
+      "retrieved": [
+        "passage_26",
+        "passage_28",
+        "passage_25",
+        "passage_29",
+        "passage_24"
+      ],
+      "ground_truth": [
+        "passage_26"
+      ],
+      "metrics": {
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0
+      }
+    },
+    "query_3": {
+      "query": "why do nails get rusty",
+      "retrieved": [
+        "passage_39",
+        "passage_35",
+        "passage_32",
+        "passage_34",
+        "passage_36"
+      ],
+      "ground_truth": [
+        "passage_35"
+      ],
+      "metrics": {
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 0.6309297535714575
+      }
+    },
+    "query_4": {
+      "query": "depona ab",
+      "retrieved": [
+        "passage_46",
+        "passage_45",
+        "passage_41",
+        "passage_42",
+        "passage_44"
+      ],
+      "ground_truth": [
+        "passage_46"
+      ],
+      "metrics": {
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0
+      }
+    },
+    "query_6": {
+      "query": "nyu tuition cost",
+      "retrieved": [
+        "passage_61",
+        "passage_62",
+        "passage_64",
+        "passage_60",
+        "passage_68"
+      ],
+      "ground_truth": [
+        "passage_61"
+      ],
+      "metrics": {
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0
+      }
+    },
+    "query_7": {
+      "query": "at what age do kids start to hold memories",
+      "retrieved": [
+        "passage_76",
+        "passage_70",
+        "passage_72",
+        "passage_74",
+        "passage_77"
+      ],
+      "ground_truth": [
+        "passage_77"
+      ],
+      "metrics": {
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 0.38685280723454163
+      }
+    },
+    "query_8": {
+      "query": "average teeth brushing time",
+      "retrieved": [
+        "passage_82",
+        "passage_89",
+        "passage_83",
+        "passage_86",
+        "passage_87"
+      ],
+      "ground_truth": [
+        "passage_82"
+      ],
+      "metrics": {
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0
+      }
+    },
+    "query_9": {
+      "query": "is funner a word?",
+      "retrieved": [
+        "passage_94",
+        "passage_92",
+        "passage_96",
+        "passage_93",
+        "passage_90"
+      ],
+      "ground_truth": [
+        "passage_94"
+      ],
+      "metrics": {
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0
+      }
+    },
+    "query_11": {
+      "query": "what is ce certified",
+      "retrieved": [
+        "passage_111",
+        "passage_112",
+        "passage_113",
+        "passage_110",
+        "passage_114"
+      ],
+      "ground_truth": [
+        "passage_111"
+      ],
+      "metrics": {
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0
+      }
+    },
+    "query_16": {
+      "query": "bancfirst customer service number",
+      "retrieved": [
+        "passage_161",
+        "passage_165",
+        "passage_168",
+        "passage_160",
+        "passage_166"
+      ],
+      "ground_truth": [
+        "passage_160"
+      ],
+      "metrics": {
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 0.43067655807339306
+      }
+    },
+    "query_18": {
+      "query": "what county is dewitt michigan in?",
+      "retrieved": [
+        "passage_183",
+        "passage_182",
+        "passage_187",
+        "passage_179",
+        "passage_188"
+      ],
+      "ground_truth": [
+        "passage_183"
+      ],
+      "metrics": {
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0
+      }
+    },
+    "query_20": {
+      "query": "using cpap without prescription",
+      "retrieved": [
+        "passage_201",
+        "passage_208",
+        "passage_206",
+        "passage_199",
+        "passage_203"
+      ],
+      "ground_truth": [
+        "passage_199"
+      ],
+      "metrics": {
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 0.43067655807339306
+      }
+    },
+    "query_21": {
+      "query": "what is early bird check in southwest",
+      "retrieved": [
+        "passage_212",
+        "passage_216",
+        "passage_215",
+        "passage_210",
+        "passage_213"
+      ],
+      "ground_truth": [
+        "passage_216"
+      ],
+      "metrics": {
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 0.6309297535714575
+      }
+    },
+    "query_23": {
+      "query": "what county is columbus city in",
+      "retrieved": [
+        "passage_232",
+        "passage_235",
+        "passage_233",
+        "passage_236",
+        "passage_229"
+      ],
+      "ground_truth": [
+        "passage_232"
+      ],
+      "metrics": {
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0
+      }
+    },
+    "query_24": {
+      "query": "social security administration in bellevue wa hours",
+      "retrieved": [
+        "passage_247",
+        "passage_242",
+        "passage_238",
+        "passage_246",
+        "passage_239"
+      ],
+      "ground_truth": [
+        "passage_247"
+      ],
+      "metrics": {
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0
+      }
+    },
+    "query_25": {
+      "query": "are whiskers on cats used for balance",
+      "retrieved": [
+        "passage_257",
+        "passage_256",
+        "passage_250",
+        "passage_255",
+        "passage_251"
+      ],
+      "ground_truth": [
+        "passage_250"
+      ],
+      "metrics": {
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 0.5
+      }
+    },
+    "query_26": {
+      "query": "what county is shelton, ct",
+      "retrieved": [
+        "passage_259",
+        "passage_263",
+        "passage_260",
+        "passage_265",
+        "passage_262"
+      ],
+      "ground_truth": [
+        "passage_259"
+      ],
+      "metrics": {
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0
+      }
+    },
+    "query_27": {
+      "query": "is the bachelor legal",
+      "retrieved": [
+        "passage_272",
+        "passage_271",
+        "passage_269",
+        "passage_274",
+        "passage_273"
+      ],
+      "ground_truth": [
+        "passage_271"
+      ],
+      "metrics": {
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 0.6309297535714575
+      }
+    },
+    "query_28": {
+      "query": "what is BP level j salary",
+      "retrieved": [
+        "passage_278",
+        "passage_286",
+        "passage_280",
+        "passage_282",
+        "passage_281"
+      ],
+      "ground_truth": [
+        "passage_278"
+      ],
+      "metrics": {
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0
+      }
+    },
+    "query_30": {
+      "query": "what dba mean",
+      "retrieved": [
+        "passage_300",
+        "passage_301",
+        "passage_304",
+        "passage_302",
+        "passage_303"
+      ],
+      "ground_truth": [
+        "passage_300"
+      ],
+      "metrics": {
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0
+      }
+    },
+    "query_31": {
+      "query": "average cost of assisted living in washington state",
+      "retrieved": [
+        "passage_314",
+        "passage_317",
+        "passage_308",
+        "passage_309",
+        "passage_311"
+      ],
+      "ground_truth": [
+        "passage_308"
+      ],
+      "metrics": {
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 0.5
+      }
+    },
+    "query_33": {
+      "query": "what disability is copd",
+      "retrieved": [
+        "passage_329",
+        "passage_328",
+        "passage_336",
+        "passage_334",
+        "passage_332"
+      ],
+      "ground_truth": [
+        "passage_335"
+      ],
+      "metrics": {
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "ndcg@5": 0.0
+      }
+    },
+    "query_35": {
+      "query": "what is a omurice omelet",
+      "retrieved": [
+        "passage_354",
+        "passage_352",
+        "passage_356",
+        "passage_349",
+        "passage_350"
+      ],
+      "ground_truth": [
+        "passage_354"
+      ],
+      "metrics": {
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0
+      }
+    },
+    "query_39": {
+      "query": "how much does it cost to change a jeep alternator",
+      "retrieved": [
+        "passage_388",
+        "passage_397",
+        "passage_390",
+        "passage_392",
+        "passage_393"
+      ],
+      "ground_truth": [
+        "passage_388"
+      ],
+      "metrics": {
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0
+      }
+    },
+    "query_40": {
+      "query": "what does folic acid do",
+      "retrieved": [
+        "passage_407",
+        "passage_405",
+        "passage_404",
+        "passage_401",
+        "passage_399"
+      ],
+      "ground_truth": [
+        "passage_401"
+      ],
+      "metrics": {
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 0.43067655807339306
+      }
+    },
+    "query_42": {
+      "query": "what county is seminole fl in",
+      "retrieved": [
+        "passage_422",
+        "passage_419",
+        "passage_423",
+        "passage_426",
+        "passage_424"
+      ],
+      "ground_truth": [
+        "passage_419"
+      ],
+      "metrics": {
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 0.6309297535714575
+      }
+    },
+    "query_43": {
+      "query": "average cost dental implant",
+      "retrieved": [
+        "passage_428",
+        "passage_432",
+        "passage_435",
+        "passage_434",
+        "passage_437"
+      ],
+      "ground_truth": [
+        "passage_437"
+      ],
+      "metrics": {
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 0.38685280723454163
+      }
+    },
+    "query_44": {
+      "query": "tripadvisor does the london hop on off bus price inlcude the cruise",
+      "retrieved": [
+        "passage_444",
+        "passage_447",
+        "passage_445",
+        "passage_441",
+        "passage_438"
+      ],
+      "ground_truth": [
+        "passage_438"
+      ],
+      "metrics": {
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 0.38685280723454163
+      }
+    },
+    "query_45": {
+      "query": "what does granuloma annulare look like",
+      "retrieved": [
+        "passage_450",
+        "passage_453",
+        "passage_454",
+        "passage_455",
+        "passage_448"
+      ],
+      "ground_truth": [
+        "passage_452"
+      ],
+      "metrics": {
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "ndcg@5": 0.0
+      }
+    },
+    "query_47": {
+      "query": "the importance of minerals in diet",
+      "retrieved": [
+        "passage_476",
+        "passage_472",
+        "passage_473",
+        "passage_468",
+        "passage_475"
+      ],
+      "ground_truth": [
+        "passage_476"
+      ],
+      "metrics": {
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 1.0
+      }
+    },
+    "query_48": {
+      "query": "prize money taxable income",
+      "retrieved": [
+        "passage_485",
+        "passage_477",
+        "passage_482",
+        "passage_484",
+        "passage_483"
+      ],
+      "ground_truth": [
+        "passage_477"
+      ],
+      "metrics": {
+        "recall@5": 1.0,
+        "precision@5": 0.2,
+        "ndcg@5": 0.6309297535714575
+      }
+    },
+    "query_50": {
+      "query": "what county is nine mile in",
+      "retrieved": [
+        "passage_503",
+        "passage_505",
+        "passage_504",
+        "passage_506",
+        "passage_499"
+      ],
+      "ground_truth": [
+        "passage_498"
+      ],
+      "metrics": {
+        "recall@5": 0.0,
+        "precision@5": 0.0,
+        "ndcg@5": 0.0
+      }
+    }
+  },
+  "num_queries": 33
+}

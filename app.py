@@ -6,12 +6,13 @@ import streamlit as st
 import subprocess
 import sys
 
-st.set_page_config(page_title="Vertex RAG Engine", page_icon="🔍")
-st.title("Vertex RAG Engine 🔍")
+st.set_page_config(page_title="MarcoRAG", page_icon="🔍")
+st.title("MarcoRAG 🔍")
 st.write("Ask a question about your docs and see the end-to-end RAG pipeline run (Stages 4→8).")
 
 # --- Helpers --- #
 def run_pipeline():
+    """Run all pipeline stages with proper error capture."""
     cmds = [
         [sys.executable, "-m", "src.retrieval.run_retrieval_pipeline"],
         [sys.executable, "-m", "src.retrieval.ground_truth_gen"],
@@ -20,9 +21,12 @@ def run_pipeline():
         [sys.executable, "-m", "src.evaluation.llm_answer_eval"],
     ]
     for cmd in cmds:
-        rc = subprocess.run(cmd).returncode
-        if rc != 0:
-            raise RuntimeError(f"Command failed: {' '.join(cmd)}")
+        result = subprocess.run(cmd, capture_output=True, text=True)
+        if result.returncode != 0:
+            error_msg = f"Command failed: {' '.join(cmd)}\n"
+            if result.stderr:
+                error_msg += f"Error output: {result.stderr}"
+            raise RuntimeError(error_msg)
 
 def latest_run_dir(base="retrieval_output") -> Path:
     runs = sorted(Path(base).glob("run_*"), key=lambda p: p.stat().st_mtime)

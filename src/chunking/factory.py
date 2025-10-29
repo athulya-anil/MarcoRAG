@@ -7,11 +7,6 @@ from .structural import StructuralChunker
 from .sliding import SlidingWindowChunker
 from .hybrid import HybridChunker
 
-from .semantic import SemanticChunker
-from .structural import StructuralChunker
-from .sliding import SlidingWindowChunker
-from .hybrid import HybridChunker
-
 class ChunkingFactory:
     @staticmethod
     def get_chunker(strategy: str):
