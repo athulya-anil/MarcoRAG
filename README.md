@@ -199,14 +199,6 @@ retrieval_output/             # Run-specific outputs
 
 ---
 
-## Notes & Limitations
-
-- Evaluation uses MS MARCO dataset with 507 passages and 33 queries with human-labeled relevance
-- Run `python run_msmarco_evaluation.py` to reproduce evaluation results
-- Embedding bug fix: Ensure `prefix_embedder.py` handles both 'text' and 'content' fields
-- Reranking improves precision but adds latency
-- Current answer evaluation uses similarity-based scoring; entity-level scoring can be added
-
 **Why MS MARCO?**
 - Provides real human relevance judgments (not LLM-generated)
 - Avoids circular validation (where ground truth is derived from retrieval results)
