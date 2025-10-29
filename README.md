@@ -1,8 +1,8 @@
-# MarcoRAG 🔍
+# MarcoRAG 
 
 **An end-to-end Retrieval-Augmented Generation (RAG) pipeline** with proper evaluation using the MS MARCO dataset.
 
-Unlike traditional RAG systems that use circular self-validation, MarcoRAG evaluates retrieval quality against **real human-labeled ground truth** from MS MARCO. It chunks documents, enriches them with metadata, builds embeddings, retrieves relevant context, generates answers with an LLM (Groq), and provides trustworthy evaluation metrics — all with reproducible run artifacts and a simple Streamlit UI.
+Unlike traditional RAG systems that use circular self-validation, MarcoRAG evaluates retrieval quality against **real human-labeled ground truth** from MS MARCO. It chunks documents, enriches them with metadata, builds embeddings, retrieves relevant context, generates answers with an LLM (Groq), and provides trustworthy evaluation metrics - all with reproducible run artifacts and a simple Streamlit UI.
 
 ---
 
